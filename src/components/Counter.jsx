@@ -1,5 +1,8 @@
-import React, { useState, useReducer } from 'react'
+import React, { useReducer } from 'react'
 import { couterReducer } from '../reducers/couterReducer'
+import { initialState } from '../reducers/couterReducer'
+import { init } from '../reducers/couterReducer'
+import { types } from '../types/types'
 
 const Counter = () => {
     
