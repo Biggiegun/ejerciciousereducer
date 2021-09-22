@@ -1,11 +1,13 @@
-import React, {useReducer} from 'react';
+import React, {useReducer, useContext} from 'react';
 import { login, logout } from '../actions/authAction';
 import { inicialState, loginReducer } from '../reducers/loginReducer';
+import { UserContext } from './UserContext';
 
 export const Login = () => {
     
     const [state, dispatch] = useReducer(loginReducer, inicialState)
-    
+    const {setUser} = useContext(UserContext)
+
     return (
         <div>
         <h1>LoginScreen</h1>
